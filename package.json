@@ -1,0 +1,24 @@
+{
+  "name": "apprestapi",
+  "version": "1.0.0",
+  "description": "Aplikasi Rest API Node JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HifzonHifzon/apprestapi.git"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "nodejs"
+  ],
+  "author": "Hifzon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HifzonHifzon/apprestapi/issues"
+  },
+  "homepage": "https://github.com/HifzonHifzon/apprestapi#readme"
+}

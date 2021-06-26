@@ -8,5 +8,4 @@ exports.ok = function(val, response) {
 
    response.json(data);
    response.end();
-
 }

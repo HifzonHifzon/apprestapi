@@ -20,7 +20,7 @@ exports.tampil = function(req, res) {
     })
 }
 
-/* Menampilkan data mahasiswa berdasarkan ID*/
+/* Menampilkan data mahasiswa berdasarkan ID & NAMA*/
 exports.tamilbyid = function(req, res){
     let id = req.params.id;
     let nama = req.params.nama;

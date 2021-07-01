@@ -10,11 +10,8 @@ module.exports = function(app) {
         .get(jsonku.tampil);
 
         app.route('/buku/:id/:nama').get(jsonku.tamilbyid);
+        // app.route('/buku/:id/:nama').get(jsonku.tamilbyid);
+        app.route('/tambah').post(jsonku.tambahmahasiswa);
+        // app.route('/cocok').post(jsonku.insert);
+        app.route('/update').put(jsonku.updateMahasiswa);
 }
-
-// module.exports = function(app) {
-//     var jsonku = require('./controller');
-
-//     app.route('/buku')
-//         .get(jsonku.buku);
-// }

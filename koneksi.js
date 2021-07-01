@@ -1,7 +1,6 @@
 var mysql = require('mysql');
 
 /*bikin koneksi*/
-
 const conn = mysql.createConnection({
     host : "localhost",
     user : "root",

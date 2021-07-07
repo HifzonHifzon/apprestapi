@@ -64,3 +64,30 @@ exports.updateMahasiswa = function(req, res){
         }
     });
 }
+
+
+exports.delete = function(req, res){
+    var id = req.body.id;
+
+    koneksi.query('DELETE FROM mahasiswa WHERE id  = ?',[id], function(error, rows, field){
+        if(error) {
+            console.log(erro);
+        } else {
+            response.result("Data telah terhapus", res)
+        }
+    })
+}
+
+
+exports.tampilGroup = function(req, res) {
+
+    koneksi.query("SELECT a.id_mahasiswa, c.nim, c.nama, c.jurusan, b.matakuliah, b.sks FROM krs as a JOIN matakuliah as b on a.idkrs = b.id_matakuliah JOIN mahasiswa as c on a.id_mahasiswa = c.id",
+        function (error, rows, field){
+            if(error) {
+                console.log(erro)
+            } else {
+                response.nesteddata(rows, res);
+            }
+        }
+    )
+}

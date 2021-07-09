@@ -13,13 +13,13 @@ exports.registrasi = function(req, res) {
         email : req.body.email,
         password : md5(req.body.password),
         role : req.body.role, 
-        tanggal_daftar : new Date()
+        tanggal : new Date()
     }
 
     var query = "SELECT email FROM ?? where ?? ";
     var table = ["user","email", post.email];
 
-    query = mysqli.format(query, table);
+    query = mysql.format(query, table);
     connection.query(query, function (error, rows){
         if(error) {
             console.log(error)
